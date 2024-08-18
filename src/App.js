@@ -26,6 +26,9 @@ const App = () => {
         return
       }
     })
+    if (!winningMessage && cells.every(cell => cell !== "")) {
+      setWinningMessage("It's a tie!")
+    }
   }
 
   useEffect(() =>{
